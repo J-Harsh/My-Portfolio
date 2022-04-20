@@ -191,10 +191,7 @@
     }
     
 
-    .toggle
-    {
-        --size:1.5rem;
-    }
+    
 
 }
 
@@ -309,6 +306,10 @@
     .portfolios
     {
         grid-template-columns: repeat(1, 1fr);
+    }
+    .toggle
+    {
+        --size:1.5rem;
     }
 }
 
