@@ -4,22 +4,28 @@
   padding-top: 3.5rem;
   .left-contact 
   {
-      flex: 2;
+      flex: 3;
       h4 
       {
           margin-top: 1rem;
           font-size: 2rem;
           text-transform: uppercase;
+          margin-bottom: 1rem;
       }
       i 
       {
         color: var(--color-grey-1) !important;
       }
-      p 
+      span 
       {
           font-size: 1.15rem !important ;
-          margin: 1rem 0;
           line-height: 2rem;
+          color: var(--color-grey-1) !important;
+      }
+      p 
+      {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
       }
 
       .contact-info 
@@ -84,7 +90,7 @@
   .right-contact 
   {
       flex: 3;
-      margin-left: 3rem;
+      margin-left: 4rem;
       .input-control 
       {
           margin: 1.5rem 0;
