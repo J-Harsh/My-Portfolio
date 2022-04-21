@@ -38,20 +38,6 @@
     --color-grey-4: #e4e4e4;
     --color-grey-5: #ede9e9;
     --color-grey-6: #12181b;
-    
-    /*
-    --color-primary: #FFFFFF;
-    --color-secondary: #05cdff;
-    --color-white: #454e56;
-    --color-black: #000;
-    --color-grey0: #f8f8f8;
-    --color-grey-1: #6c7983;
-    --color-grey-2: #6c7983;
-    --color-grey-3: #6c7983;
-    --color-grey-4: #454e56;
-    --color-grey-5: #f8f8f8;
-    --color-grey-6: #12181b;
-    */
 }
 
 body
@@ -94,12 +80,12 @@ section
     position: absolute;
     top: 0;
     left: 0;
-    padding: 3rem 18rem;
+    padding: 3rem 18rem 2rem 18rem;
 }
 
 .section
 {
-    transform: translateY(-100%) scale(0);
+    transform: scale(0);
     transition: var(--transition);
     background-color: var(--color-primary);
 }
@@ -107,32 +93,32 @@ section
 .sec1
 {
     display: none;
-    transform: translateY(0) scale(1);
+    transform: scale(1);
 }
 
 .sec2
 {
     display: none;
-    transform: translateY(0) scale(1);
+    transform: scale(1);
     
 }
 
 .sec3
 {
     display: none;
-    transform: translateY(0) scale(1);
+    transform: scale(1);
 }
 
 .sec4
 {
     display: none;
-    transform: translateY(0) scale(1);
+    transform: scale(1);
 }
 
 .sec5
 {
     display: none;
-    transform: translateY(0) scale(1);
+    transform: scale(1);
 }
 .current
 {
@@ -144,13 +130,13 @@ section
         from 
         {
           opacity: 0;
-          filter: blur(50px);
+          filter: blur(4rem);
         }
 
         to 
         {
           opacity: 1;
-          filter: blur(0px);
+          filter: blur(0rem);
         }
     }
 }
@@ -223,6 +209,7 @@ section
     transition: var(--transition);
     .btn-text
     {
+        color: var(--color-white);
         padding: 0 2rem;
     }
     .btn-icon

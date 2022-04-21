@@ -7,10 +7,12 @@
     align-content: center;
     .blog
     {
+
         width: 18rem;
         position: relative;
         right:2.5rem;
         background-color: var(--color-grey-6);
+        border: 1px solid var(--color-secondary);
         border-radius: 0.3125rem;
         box-shadow: 1px 1px 20px rgba(0,0,0,0.1);
         transition: var(--transition);

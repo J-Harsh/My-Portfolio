@@ -36,19 +36,6 @@
   --color-grey-4: #e4e4e4;
   --color-grey-5: #ede9e9;
   --color-grey-6: #12181b;
-  /*
-    --color-primary: #FFFFFF;
-    --color-secondary: #05cdff;
-    --color-white: #454e56;
-    --color-black: #000;
-    --color-grey0: #f8f8f8;
-    --color-grey-1: #6c7983;
-    --color-grey-2: #6c7983;
-    --color-grey-3: #6c7983;
-    --color-grey-4: #454e56;
-    --color-grey-5: #f8f8f8;
-    --color-grey-6: #12181b;
-    */
 }
 
 body {
@@ -88,12 +75,12 @@ section {
   position: absolute;
   top: 0;
   left: 0;
-  padding: 3rem 18rem;
+  padding: 3rem 18rem 2rem 18rem;
 }
 
 .section {
-  -webkit-transform: translateY(-100%) scale(0);
-          transform: translateY(-100%) scale(0);
+  -webkit-transform: scale(0);
+          transform: scale(0);
   -webkit-transition: var(--transition);
   transition: var(--transition);
   background-color: var(--color-primary);
@@ -101,32 +88,32 @@ section {
 
 .sec1 {
   display: none;
-  -webkit-transform: translateY(0) scale(1);
-          transform: translateY(0) scale(1);
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .sec2 {
   display: none;
-  -webkit-transform: translateY(0) scale(1);
-          transform: translateY(0) scale(1);
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .sec3 {
   display: none;
-  -webkit-transform: translateY(0) scale(1);
-          transform: translateY(0) scale(1);
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .sec4 {
   display: none;
-  -webkit-transform: translateY(0) scale(1);
-          transform: translateY(0) scale(1);
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .sec5 {
   display: none;
-  -webkit-transform: translateY(0) scale(1);
-          transform: translateY(0) scale(1);
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .current {
@@ -139,26 +126,26 @@ section {
 @-webkit-keyframes fade-out {
   from {
     opacity: 0;
-    -webkit-filter: blur(50px);
-            filter: blur(50px);
+    -webkit-filter: blur(4rem);
+            filter: blur(4rem);
   }
   to {
     opacity: 1;
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
+    -webkit-filter: blur(0rem);
+            filter: blur(0rem);
   }
 }
 
 @keyframes fade-out {
   from {
     opacity: 0;
-    -webkit-filter: blur(50px);
-            filter: blur(50px);
+    -webkit-filter: blur(4rem);
+            filter: blur(4rem);
   }
   to {
     opacity: 1;
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
+    -webkit-filter: blur(0rem);
+            filter: blur(0rem);
   }
 }
 
@@ -249,6 +236,7 @@ section {
 }
 
 .main-btn .btn-text {
+  color: var(--color-white);
   padding: 0 2rem;
 }
 
@@ -706,6 +694,7 @@ section {
 }
 
 .portfolios .portfolio-item img {
+  border: 3px solid var(--color-secondary);
   width: 100%;
   height: 16.75rem;
   -o-object-fit: cover;
@@ -815,6 +804,7 @@ section {
   position: relative;
   right: 2.5rem;
   background-color: var(--color-grey-6);
+  border: 1px solid var(--color-secondary);
   border-radius: 0.3125rem;
   -webkit-box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
           box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
