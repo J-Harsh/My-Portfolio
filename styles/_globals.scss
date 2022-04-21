@@ -138,17 +138,19 @@ section
 {
     display: block;
     overflow-y: hidden;
-    animation: slideDown 1s ease-in 0s 1 forwards;
-    @keyframes slideDown 
+    animation: fade-out 800ms ease-in-out 0s 1 forwards;
+    @keyframes fade-out 
     {
         from 
         {
-          transform: translateY(-100%);
+          opacity: 0;
+          filter: blur(50px);
         }
 
         to 
         {
-          transform: translateY(0%);
+          opacity: 1;
+          filter: blur(0px);
         }
     }
 }

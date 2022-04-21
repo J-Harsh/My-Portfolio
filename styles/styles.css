@@ -132,29 +132,33 @@ section {
 .current {
   display: block;
   overflow-y: hidden;
-  -webkit-animation: slideDown 1s ease-in 0s 1 forwards;
-          animation: slideDown 1s ease-in 0s 1 forwards;
+  -webkit-animation: fade-out 800ms ease-in-out 0s 1 forwards;
+          animation: fade-out 800ms ease-in-out 0s 1 forwards;
 }
 
-@-webkit-keyframes slideDown {
+@-webkit-keyframes fade-out {
   from {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
+    opacity: 0;
+    -webkit-filter: blur(50px);
+            filter: blur(50px);
   }
   to {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
+    opacity: 1;
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
   }
 }
 
-@keyframes slideDown {
+@keyframes fade-out {
   from {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
+    opacity: 0;
+    -webkit-filter: blur(50px);
+            filter: blur(50px);
   }
   to {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
+    opacity: 1;
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
   }
 }
 
