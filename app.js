@@ -39,7 +39,7 @@ function PageTransition()
                section.classList.remove("current")
            });
 
-           window.scrollTo(0, 0);
+           window.scrollTo(0,0);
            const element=document.getElementById(id);
            element.classList.add("current");
        }
