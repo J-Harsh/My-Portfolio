@@ -7,6 +7,7 @@ const btnText = document.querySelector("#btnText");
 
 console.log("hi");
 
+
 function PageTransition()
 {
     //Button click active class
@@ -43,7 +44,6 @@ function PageTransition()
            const element=document.getElementById(id);
            element.classList.add("current");
        }
-       console.log(id); 
     });
 
 }
@@ -105,5 +105,15 @@ themeBtn.addEventListener('click',()=>
     let elem=document.body;
     elem.classList.toggle('light-mode');
 })
+
+//portfolio button
+const portfolioBtn=document.querySelectorAll(".language");
+portfolioBtn.forEach((ele)=>
+{
+  ele.addEventListener("click",()=>
+  {
+    ele.classList.toggle("selected");
+  });
+});
 
 PageTransition();

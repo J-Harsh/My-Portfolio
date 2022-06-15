@@ -21,7 +21,7 @@
     --color-grey-6: #12181b;
     --br-sm-2: 14px;
     --box-shadow-1: 0 3px 15px rgba(0,0,0,.3);
-    --transition:all .4s ease-in-out;
+    --transition: all 400ms ease-in-out;
 }
 
 .light-mode 
@@ -259,6 +259,7 @@ section
         text-transform: uppercase;
         font-size: 3rem;
         font-weight: 700;
+        margin-top: -0.75rem;
         span 
         { 
             color: var(--color-secondary); 
