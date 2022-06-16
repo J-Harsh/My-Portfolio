@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap');
+
 *
 {
     margin:0;
@@ -9,9 +11,9 @@
 :root 
 {
     --color-primary: #191d2b;
-    --color-secondary: #27AE60;
+    --color-secondary: #d92e2e;
     --color-white: #FFFFFF;
-    --color-black: #000;
+    --color-black: #000000;
     --color-grey0: #f8f8f8;
     --color-grey-1: #dbe1e8;
     --color-grey-2: #b2becd;
@@ -20,7 +22,7 @@
     --color-grey-5: #2a2e35;
     --color-grey-6: #12181b;
     --br-sm-2: 14px;
-    --box-shadow-1: 0 3px 15px rgba(0,0,0,.3);
+    --box-shadow-1: 0 3px 15px rgba(255, 255, 255,0.1);
     --transition: all 400ms ease-in-out;
 }
 
@@ -29,8 +31,8 @@
     
     --color-primary: #FFFFFF;
     --color-secondary:  #05cdff;
-    --color-white: #454e56;
-    --color-black: #000;
+    --color-white: #000000;
+    --color-black: #ffffff;
     --color-grey0: #f8f8f8;
     --color-grey-1: #6d6b6b;
     --color-grey-2: #6c7983;
@@ -38,12 +40,12 @@
     --color-grey-4: #e4e4e4;
     --color-grey-5: #ede9e9;
     --color-grey-6: #12181b;
+    --box-shadow-1: 0 3px 15px rgba(0,0,0,.3);
 }
 
 body
 {
     font-family: 'Poppins', sans-serif;
-    font-family: 'Public Sans', sans-serif;
     background-color: var(--color-primary);
     color: var(--color-white);
     font-size: 1.1rem;
@@ -156,6 +158,13 @@ section
     transform: translateY(-50%);
     align-items: center;
     justify-content: center;
+    
+    .control-text
+    {
+        font-family: 'Leckerli One', cursive;
+        font-size: 1.25rem;
+        color: var(--color-grey-2);
+    }
 
     .active-btn
     {
@@ -195,59 +204,94 @@ section
     align-self: flex-start;
 }
 
-.main-btn
-{
-    border-radius: 1.875rem;
-    color: var(--color-grey-1);
-    font-weight: 600;
-    position: relative;
-    border: 1px solid var(--color-secondary);
-    display: flex;
-    align-self: flex-start;
-    align-items: center;
-    overflow: hidden;
-    transition: var(--transition);
-    .btn-text
-    {
-        color: var(--color-white);
-        padding: 0 2rem;
-    }
-    .btn-icon
-    {
-        font-size: 1.75rem;
-        color: var(--color-secondary);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        padding: 1rem;
-    }
-    &::before
-    {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        transform: translateX(100%);
-        transition: var(--transition);
-        z-index: -1;
-    }
-    &:hover
-    {
-        .btn-icon
-        {
-            color: var(--color-white);
-            transition: var(--transition);
-        }
 
-        &::before
-        {
-            width: 100%;
-            height: 100%;
-            background-color: var(--color-secondary);
-            transform: translateX(0);
-        }
+
+
+.main-btn {
+  top: 0;
+  left: 0;
+  transition: all .15s linear 0s;
+  position: relative;
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: var(--color-white);
+  color: var(--color-secondary);
+  letter-spacing: 1px;
+  
+  box-shadow: -6px 6px 0 var(--color-secondary);
+  text-transform: uppercase;
+  
+  .btn-text
+    {
+        font-size: 1.25rem;
+        font-weight: 700;
+        font-family: 'Nunito', sans-serif;
     }
+
+  &:hover {
+    top: 3px;
+    left: -3px;
+    box-shadow: -3px 3px 0 var(--color-secondary);
+    
+    &::after {
+      top: 1px;
+      left: -2px;
+      width: 4px;
+      height: 4px;
+    }
+    
+    &::before {
+      bottom: -2px;
+      right: 1px;
+      width: 4px;
+      height: 4px;
+    }
+  }
+  
+  &::after {
+    transition: var(--transition);
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: -4px;
+    width: 8px;
+    height: 8px;
+    background-color: var(--color-secondary);
+    transform: rotate(45deg);
+    z-index: -1;
+    
+  }
+  
+  &::before {
+    transition: var(--transition);
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    right: 2px;
+    width: 8px;
+    height: 8px;
+    background-color: var(--color-secondary);
+    transform: rotate(45deg);
+    z-index: -1;
+  }
+}
+
+a.main-btn { position: relative; }
+
+a:active.main-btn {
+  top: 6px;
+  left: -6px;
+  box-shadow: none;
+  
+  &:before {
+    bottom: 1px;
+    right: 1px;
+  }
+  
+  &:after {
+    top: 1px;
+    left: 1px;
+  }
 }
 
 .main-title 
@@ -299,7 +343,7 @@ section
         box-shadow: inset calc(var(--size) * 0.33) calc(var(--size) * -0.25) 0;
         border-radius: 999px;
         color: var(--color-grey-2);
-        transition: all 500ms ease-in-out;
+        transition: var(--transition);
         
         &:checked 
         {
