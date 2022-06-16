@@ -319,6 +319,7 @@
     {
         --size:1.5rem;
     }
+
 }
 
 @media screen and (max-width:1070px)
@@ -350,6 +351,11 @@
 
 @media screen and (max-width:970px)
 {
+    
+    .quotes
+    {
+       display: none;
+    }
     .container
     {
         padding: 7rem 6rem;
@@ -389,6 +395,22 @@
             text-align: center;
             padding-top: 3rem;
         }
+    }
+
+    .quotes
+    {
+        background-color: var(--color-primary);
+        border: 2px dashed var(--color-secondary);
+    }
+
+    .box
+    {
+        display: none;
+    }
+
+    .box.show
+    {
+        display: none;
     }
 }
 

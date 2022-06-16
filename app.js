@@ -111,4 +111,36 @@ portfolioBtn.forEach((ele) => {
   });
 });
 
+//quotes api
+async function updateQuote() 
+{
+  // Fetch a random quote from the Quotable API
+  const box=document.getElementById("box");
+  const response = await fetch("https://api.quotable.io/random?maxLength=50");
+  const data = await response.json();
+  if (response.ok) {
+    // Update DOM elements
+    const author=document.createElement("p");
+    author.innerText=`\xa0-${data.author}`;
+    
+    box.innerText='"'+data.content+'"        ';
+    box.appendChild(author);
+
+  } else {
+    quote.textContent = "An error occured";
+    console.log(data);
+  }
+}
+
+const quoteBtn=document.getElementById("quotes");
+quoteBtn.addEventListener("click",()=>
+{
+  console.log(1);
+  box.classList.toggle("show");
+  if(!box.classList.contains("show"))
+    updateQuote();
+})
+
+
+updateQuote();
 PageTransition();
