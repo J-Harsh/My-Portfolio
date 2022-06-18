@@ -1,6 +1,13 @@
 @media screen and (max-width: 768px)
 {
 
+    .cursor-outer{
+        display: none;
+      }
+      .cursor-inner
+      {
+        display: none;
+      }
     //header
     header
     {
