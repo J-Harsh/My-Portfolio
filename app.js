@@ -141,6 +141,16 @@ quoteBtn.addEventListener("click",()=>
     updateQuote();
 })
 
+const cursor = document.querySelector(".cursor-inner");
+            const cursor2 = document.querySelector(".cursor-outer");
+            document.addEventListener("mousemove", e=>{
+              console.log(e.pageX,e.pageY);
+                cursor.style.top = e.clientY + "px";
+                cursor.style.left = e.clientX + "px";
+    
+                cursor2.style.top = e.clientY + "px";
+                cursor2.style.left = e.clientX + "px";
+            })
 
 updateQuote();
 PageTransition();

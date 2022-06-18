@@ -53,8 +53,11 @@
         .name
         {
             font-size: 2rem;
+            word-spacing: 3px;
             span
             {
+                font-size: 3rem;
+                font-family: 'Moon Dance', cursive;
                 color: var(--color-secondary);
             }
         }

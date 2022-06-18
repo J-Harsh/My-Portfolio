@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap');
 @import url('//db.onlinewebfonts.com/c/4478bac97c5a69efb625357a83017b06?family=Basecoat+Light');
+@import url('https://fonts.googleapis.com/css2?family=Moon+Dance&display=swap');
 
 *
 {
@@ -51,12 +52,13 @@ body
     color: var(--color-white);
     font-size: 1.1rem;
     transition: var(--transition);
-
+    cursor: none;
     p
     {
         color: var(--color-grey-1) !important;
         font-weight: 400 !important;
     }
+
 }
 
 a
@@ -67,6 +69,34 @@ a
     font-family: inherit;
     transition: var(--transition);
 }
+
+
+
+[class^="cursor"]{
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%,-50%);
+  border-radius: 50%;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+
+.cursor-outer{
+  width: 50px !important;
+  height: 50px !important;
+  border: 2px solid var(--color-white);
+  transition: all 400ms ease-out;
+  z-index: 10;
+}
+.cursor-inner{
+  width: 7px !important;
+  height: 7px !important;
+  background: var(--color-secondary);
+  z-index: 10;
+}
+
 
 header
 {
@@ -127,13 +157,13 @@ section
 {
     display: block;
     overflow-y: hidden;
-    animation: fade-out 800ms ease-in-out 0s 1 forwards;
+    animation: fade-out 600ms ease-in-out 0s 1 forwards;
     @keyframes fade-out 
     {
         from 
         {
           opacity: 0;
-          filter: blur(4rem);
+          filter: blur(1rem);
         }
 
         to 
@@ -159,7 +189,7 @@ section
     transform: translateY(-50%);
     align-items: center;
     justify-content: center;
-    
+
     .control-text
     {
         font-family: 'Leckerli One', cursive;
@@ -425,3 +455,4 @@ a:active.main-btn {
           max-width: max-content;
           visibility: visible;
         }
+      
