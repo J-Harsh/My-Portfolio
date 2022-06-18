@@ -1,5 +1,22 @@
 @media screen and (max-width: 768px)
 {
+    
+    .main-title
+    {
+        h2
+        {
+            margin-top: 0.75rem;
+            font-size: 2.5rem;
+            span 
+            {
+                font-size: 2.5rem;
+            }
+            .bg-text
+            {
+                font-size: 3.5rem;
+            }
+        }
+    }
 
     .cursor-outer{
         display: none;
@@ -131,6 +148,12 @@
     }
 
     //portfolio
+    .port-text
+    {
+        margin: 3rem 0rem 2rem 0rem;
+        padding: 0;
+        text-align: center;
+    }
     .sorting
     {
         font-size: 0.825rem;
@@ -180,26 +203,6 @@
         margin-bottom: 2rem;
         padding: 2rem 2.5rem;
     }
-
-    .main-title
-    {
-        h2
-        {
-            font-size: 1.5rem;
-            span 
-            {
-                font-size: 1.5rem;
-            }
-            .bg-text
-            {
-                font-size: 2.25rem;
-            }
-        }
-    }
-    
-
-    
-
 }
 
 @media screen and (max-width:1432px){
@@ -228,14 +231,6 @@
 
     .contact-content-con .right-contact{
         margin-bottom: 6rem;
-    }
-
-    .main-title{
-        h2{
-            .bg-text{
-                font-size: 5.5rem;
-            }
-        }
     }
     
 }
@@ -339,21 +334,7 @@
             padding-top: 2.5rem;
         }
     }
-    .main-title
-    {
-        h2
-        {
-            font-size: 4rem;
-            span
-            {
-                font-size: 4rem;
-            }
-            .bg-text
-            {
-                font-size: 4.5rem;
-            }
-        }
-    }
+    
 }
 
 @media screen and (max-width:970px)
@@ -439,20 +420,5 @@
     .timeline
     {
         grid-template-columns: repeat(1, 1fr);
-    }
-    .main-title
-    {
-        h2
-        {
-            font-size: 3rem;
-            span
-            {
-                font-size: 3rem;
-            }
-            .bg-text
-            {
-                font-size: 4rem;
-            }
-        }
     }
 }

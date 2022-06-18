@@ -364,7 +364,7 @@ a:active.main-btn:after {
 
 .main-title h2 .bg-text {
   position: absolute;
-  top: 45%;
+  top: 50%;
   left: 50%;
   color: var(--color-grey-5);
   -webkit-transition: all .4s ease-in-out;
@@ -827,7 +827,7 @@ a:active.main-btn:after {
 }
 
 .port-text {
-  padding: 1rem 0rem;
+  padding: 1rem 0rem 1.5rem 0rem;
   text-align: center;
 }
 
@@ -835,7 +835,7 @@ a:active.main-btn:after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0.625rem auto;
+  margin: auto;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1296,6 +1296,16 @@ svg path {
 }
 
 @media screen and (max-width: 768px) {
+  .main-title h2 {
+    margin-top: 0.75rem;
+    font-size: 2.5rem;
+  }
+  .main-title h2 span {
+    font-size: 2.5rem;
+  }
+  .main-title h2 .bg-text {
+    font-size: 3.5rem;
+  }
   .cursor-outer {
     display: none;
   }
@@ -1403,6 +1413,11 @@ svg path {
         -ms-grid-row-align: center;
         align-self: center;
   }
+  .port-text {
+    margin: 3rem 0rem 2rem 0rem;
+    padding: 0;
+    text-align: center;
+  }
   .sorting {
     font-size: 0.825rem;
   }
@@ -1443,15 +1458,6 @@ svg path {
     margin-bottom: 2rem;
     padding: 2rem 2.5rem;
   }
-  .main-title h2 {
-    font-size: 1.5rem;
-  }
-  .main-title h2 span {
-    font-size: 1.5rem;
-  }
-  .main-title h2 .bg-text {
-    font-size: 2.25rem;
-  }
 }
 
 @media screen and (max-width: 1432px) {
@@ -1480,9 +1486,6 @@ svg path {
   }
   .contact-content-con .right-contact {
     margin-bottom: 6rem;
-  }
-  .main-title h2 .bg-text {
-    font-size: 5.5rem;
   }
 }
 
@@ -1561,15 +1564,6 @@ svg path {
   .about-container .right-about {
     padding-top: 2.5rem;
   }
-  .main-title h2 {
-    font-size: 4rem;
-  }
-  .main-title h2 span {
-    font-size: 4rem;
-  }
-  .main-title h2 .bg-text {
-    font-size: 4.5rem;
-  }
 }
 
 @media screen and (max-width: 970px) {
@@ -1633,15 +1627,6 @@ svg path {
   .timeline {
     -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
-  }
-  .main-title h2 {
-    font-size: 3rem;
-  }
-  .main-title h2 span {
-    font-size: 3rem;
-  }
-  .main-title h2 .bg-text {
-    font-size: 4rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */
