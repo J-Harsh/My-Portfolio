@@ -423,7 +423,7 @@ a:active.main-btn {
           transform: scaleX(-1);
         }
 
-        &::selection
+        &:active
         {
           transform: scaleX(-1);
         }
