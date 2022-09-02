@@ -164,10 +164,10 @@ quoteBtn.addEventListener("click",()=>
   box.classList.toggle("show");
   if(!box.classList.contains("show"))
     updateQuote();
-  secBtns.forEach((btn) => {
-        btn.classList.remove("active");
+  secBtn.forEach((btn) => {
+        btn.classList.remove("active-btn");
         if(btn.classList.contains("control-1"))
-        btn.classList.add("active-btn")
+          btn.classList.add("active-btn")
       });
       sections.forEach((section) => {
         section.classList.remove("current");
