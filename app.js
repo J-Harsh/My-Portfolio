@@ -105,7 +105,6 @@ allBtn.addEventListener("click", () => {
     item.classList.remove("hide")
   })
   arr.splice(0, arr.length)
-  console.log(arr);
 });
 
 var i=0;
@@ -120,7 +119,6 @@ portfolioBtn.forEach((ele) => {
     else 
       arr.push(ele.innerText)
     hideItem();
-    console.log(arr);
     if (ele.textContent != "All") {
       allBtn.classList.remove("selected");
     }

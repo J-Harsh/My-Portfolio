@@ -63,11 +63,12 @@
         position: relative; 
         img
         {
-            border: 3px solid var(--color-secondary);
+            border: 2px solid var(--color-secondary);
             width: 100%;
             height: 12.75rem;
             object-fit: cover;
             border-radius: 1rem;
+            opacity: 0.8;
         }
         .hover-item
         {
@@ -87,7 +88,7 @@
             transition: var(--transition);
             h3 
             {
-                font-size: 1.5rem;
+                font-size: 1.15rem;
                 color: var(--color-white);
                 margin-bottom: 1.5rem;
             }
