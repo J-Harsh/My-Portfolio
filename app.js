@@ -4,6 +4,7 @@ const secBtn = document.querySelectorAll(".control");
 const allSections = document.querySelector(".main-content");
 const btn = document.querySelector("#btn");
 const btnText = document.querySelector("#btnText");
+const portfolioItem=document.querySelectorAll(".portfolio-item");
 
 console.log("hi");
 
@@ -45,12 +46,9 @@ function PageTransition() {
 //FORM submission
 window.addEventListener("DOMContentLoaded", function () {
   // get the form elements defined in your form HTML above
-
   var form = document.getElementById("my-form");
-  //var status = document.getElementById("status");
 
   // Success and Error functions for after the form is submitted
-
   function success() {
     btnText.innerHTML = "Success";
     btn.classList.add("active");
@@ -96,20 +94,49 @@ themeBtn.addEventListener("click", () => {
 
 //portfolio button
 const portfolioBtn = document.querySelectorAll(".language");
+var arr=[];
 const allBtn = document.getElementById("all");
 allBtn.addEventListener("click", () => {
+  allBtn.classList.add("selected")
   portfolioBtn.forEach((ele) => {
-    if (ele.textContent != "All") ele.classList.remove("selected");
+    ele.classList.remove("selected");
   });
+  portfolioItem.forEach((item)=>{
+    item.classList.remove("hide")
+  })
+  arr.splice(0, arr.length)
+  console.log(arr);
 });
+
+var i=0;
 portfolioBtn.forEach((ele) => {
   ele.addEventListener("click", () => {
     ele.classList.toggle("selected");
+    if(arr.includes(ele.innerText))
+    {
+      var i=arr.indexOf(ele.innerText);
+      arr.splice(i,1);
+    }
+    else 
+      arr.push(ele.innerText)
+    hideItem();
+    console.log(arr);
     if (ele.textContent != "All") {
       allBtn.classList.remove("selected");
     }
   });
 });
+
+function hideItem()
+{
+  portfolioItem.forEach((item)=>{
+    if(!arr.includes(item.getAttribute("data-id")))
+      item.classList.add("hide");
+    else 
+    item.classList.remove("hide");
+  })
+}
+
 
 //quotes api
 async function updateQuote() 
@@ -135,10 +162,20 @@ async function updateQuote()
 const quoteBtn=document.getElementById("quotes");
 quoteBtn.addEventListener("click",()=>
 {
-  console.log(1);
+
   box.classList.toggle("show");
   if(!box.classList.contains("show"))
     updateQuote();
+  secBtns.forEach((btn) => {
+        btn.classList.remove("active");
+        if(btn.classList.contains("control-1"))
+        btn.classList.add("active-btn")
+      });
+      sections.forEach((section) => {
+        section.classList.remove("current");
+        if(section.classList.contains("sec1"))
+        section.classList.add("current");
+      });
 })
 
 const cursor = document.querySelector(".cursor-inner");
